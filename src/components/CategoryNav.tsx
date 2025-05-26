@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 interface CategoryNavProps {
   categories: string[];
@@ -12,6 +12,37 @@ const CategoryNav: React.FC<CategoryNavProps> = ({
   selectedCategory 
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+
+  // Mouse and touch drag handlers
+  const onDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    isDragging.current = true;
+    if ('touches' in e) {
+      startX.current = e.touches[0].pageX - (navRef.current?.offsetLeft || 0);
+    } else {
+      startX.current = e.pageX - (navRef.current?.offsetLeft || 0);
+    }
+    scrollLeft.current = navRef.current?.scrollLeft || 0;
+  };
+
+  const onDragMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging.current || !navRef.current) return;
+    let x;
+    if ('touches' in e) {
+      x = e.touches[0].pageX - navRef.current.offsetLeft;
+    } else {
+      x = e.pageX - navRef.current.offsetLeft;
+    }
+    const walk = x - startX.current;
+    navRef.current.scrollLeft = scrollLeft.current - walk;
+  };
+
+  const onDragEnd = () => {
+    isDragging.current = false;
+  };
 
   const getCategoryEmoji = (category: string) => {
     const emojiMap: { [key: string]: string } = {
@@ -46,14 +77,22 @@ const CategoryNav: React.FC<CategoryNavProps> = ({
             <span className="text-2xl">☰</span>
           </button>
 
-          {/* Desktop category navigation with snap scrolling and hidden scrollbar */}
+          {/* Desktop category navigation with drag-to-scroll */}
           <div className="hidden md:flex relative w-full">
             {/* Edge fade effect */}
             <div className="pointer-events-none absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-white dark:from-gray-800 to-transparent z-10" />
             <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white dark:from-gray-800 to-transparent z-10" />
             <div
-              className="flex space-x-2 overflow-x-auto pb-2 w-full scrollbar-hide snap-x snap-mandatory"
+              ref={navRef}
+              className="flex space-x-2 overflow-x-auto pb-2 w-full scrollbar-hide snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none"
               style={{ WebkitOverflowScrolling: 'touch' }}
+              onMouseDown={onDragStart}
+              onMouseMove={onDragMove}
+              onMouseUp={onDragEnd}
+              onMouseLeave={onDragEnd}
+              onTouchStart={onDragStart}
+              onTouchMove={onDragMove}
+              onTouchEnd={onDragEnd}
             >
               {categories.map((category) => (
                 <button

@@ -112,6 +112,34 @@ export const phrases: Phrase[] = [
     french: 'Que fais-tu pendant les vacances ? Pendant les vacances, nous partons en voyage en famille. Nous visitons les sites et les musées que je trouve très intéressantes.',
     audioSrc: '/audio/vacations.mp3',
     category: 'Holidays'
+  },
+  {
+    id: '17',
+    english: 'Do you like your school?',
+    french: 'Est-ce que tu aimes ton école ?',
+    audioSrc: '/audio/est ce que tu aime to ecole.mp3',
+    category: 'School'
+  },
+  {
+    id: '18',
+    english: 'What is your favorite subject?',
+    french: 'Quelle est ta matière préférée ?',
+    audioSrc: '/audio/qulle matiere prefere.mp3',
+    category: 'School'
+  },
+  {
+    id: '19',
+    english: 'I am learning French.',
+    french: 'J\'apprends le français.',
+    audioSrc: '/audio/japprend.mp3',
+    category: 'Study'
+  },
+  {
+    id: '20',
+    english: 'I practice theatre.',
+    french: 'Je pratique le théâtre.',
+    audioSrc: '/audio/je pratique le theatre.mp3',
+    category: 'Activities'
   }
 ];
 

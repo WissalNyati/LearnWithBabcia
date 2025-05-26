@@ -3,10 +3,15 @@ import Header from './components/Header';
 import PhrasesContainer from './components/PhrasesContainer';
 import Footer from './components/Footer';
 import { phrases, categories } from './data/phrases';
+import PhraseCard from './components/PhraseCard';
+import CategoryNav from './components/CategoryNav';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentlyPlaying, setCurrentlyPlaying] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [seenPhrases, setSeenPhrases] = useState<Set<string>>(new Set());
   
   // Check for user's preferred color scheme
   useEffect(() => {
@@ -33,6 +38,19 @@ function App() {
     setSearchQuery(query);
   };
 
+  const handlePlayPause = (id: string) => {
+    if (currentlyPlaying === id) {
+      setCurrentlyPlaying(null);
+    } else {
+      setCurrentlyPlaying(id);
+      setSeenPhrases(prev => new Set([...prev, id]));
+    }
+  };
+
+  const filteredPhrases = selectedCategory
+    ? phrases.filter(phrase => phrase.category === selectedCategory)
+    : phrases;
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Header 
@@ -54,8 +72,14 @@ function App() {
           </div>
         </section>
         
+        <CategoryNav
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onSelectCategory={setSelectedCategory}
+        />
+        
         <PhrasesContainer 
-          phrases={phrases} 
+          phrases={filteredPhrases} 
           categories={categories}
           searchQuery={searchQuery}
         />

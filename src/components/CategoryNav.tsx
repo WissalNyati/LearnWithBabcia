@@ -36,7 +36,7 @@ const CategoryNav: React.FC<CategoryNavProps> = ({
 
   return (
     <div className="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16">
           {/* Mobile menu button */}
           <button
@@ -46,41 +46,33 @@ const CategoryNav: React.FC<CategoryNavProps> = ({
             <span className="text-2xl">☰</span>
           </button>
 
-          {/* Desktop category navigation */}
-          <div className="hidden md:flex space-x-2 overflow-x-auto pb-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => onSelectCategory(category)}
-                className={`
-                  flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium
-                  transition-all duration-200 transform hover:scale-105
-                  ${selectedCategory === category
-                    ? 'bg-blue-500 text-white shadow-lg'
-                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-                  }
-                `}
-              >
-                <span className="text-xl animate-bounce-slow">{getCategoryEmoji(category)}</span>
-                <span>{category}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Quick jump dropdown */}
-          <div className="hidden md:block">
-            <select
-              value={selectedCategory}
-              onChange={(e) => onSelectCategory(e.target.value)}
-              className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+          {/* Desktop category navigation with snap scrolling and hidden scrollbar */}
+          <div className="hidden md:flex relative w-full">
+            {/* Edge fade effect */}
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-white dark:from-gray-800 to-transparent z-10" />
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white dark:from-gray-800 to-transparent z-10" />
+            <div
+              className="flex space-x-2 overflow-x-auto pb-2 w-full scrollbar-hide snap-x snap-mandatory"
+              style={{ WebkitOverflowScrolling: 'touch' }}
             >
-              <option value="">Quick Jump to Category</option>
               {categories.map((category) => (
-                <option key={category} value={category}>
-                  {getCategoryEmoji(category)} {category}
-                </option>
+                <button
+                  key={category}
+                  onClick={() => onSelectCategory(category)}
+                  className={`
+                    flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium
+                    transition-all duration-200 transform hover:scale-105 snap-center
+                    ${selectedCategory === category
+                      ? 'bg-blue-500 text-white shadow-lg'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                    }
+                  `}
+                >
+                  <span className="text-xl animate-bounce-slow">{getCategoryEmoji(category)}</span>
+                  <span>{category}</span>
+                </button>
               ))}
-            </select>
+            </div>
           </div>
         </div>
 
@@ -112,6 +104,11 @@ const CategoryNav: React.FC<CategoryNavProps> = ({
           </div>
         )}
       </div>
+      {/* Hide scrollbar utility */}
+      <style>{`
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </div>
   );
 };

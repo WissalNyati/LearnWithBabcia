@@ -84,7 +84,7 @@ const CategoryNav: React.FC<CategoryNavProps> = ({
             <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white dark:from-gray-800 to-transparent z-10" />
             <div
               ref={navRef}
-              className="flex space-x-2 overflow-x-auto pb-2 w-full scrollbar-hide snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none"
+              className="flex space-x-2 overflow-x-auto pb-2 w-full scrollbar-hide cursor-grab active:cursor-grabbing select-none"
               style={{ WebkitOverflowScrolling: 'touch' }}
               onMouseDown={onDragStart}
               onMouseMove={onDragMove}

@@ -140,6 +140,237 @@ export const phrases: Phrase[] = [
     french: 'Je pratique le théâtre.',
     audioSrc: '/audio/je pratique le theatre.mp3',
     category: 'Activities'
+  },
+  {
+    id: '21',
+    english: 'I have chestnut hair and brown eyes. I am a friendly, sporty, and calm person. I like intellectual, sports, and manual activities.',
+    french: 'J\'ai les cheveux châtains et les yeux marrons. Je suis une personne sympathique, sportive et calme. J\'aime les activités intellectuelles, sportives et manuelles.',
+    audioSrc: '/audio/cheveux-yeux.mp3',
+    category: 'Personal Description'
+  },
+  {
+    id: '22',
+    english: 'Do you have brothers and sisters?',
+    french: 'As-tu des frères et sœurs ?',
+    audioSrc: '/audio/freres-soeurs.mp3',
+    category: 'Family'
+  },
+  {
+    id: '23',
+    english: 'I have a little sister, her name is Hannah, she is three years old, her hair is long and a bit curly, she has brown eyes, she is a very kind and very funny little girl.',
+    french: 'J\'ai une petite sœur, elle s\'appelle Hannah, elle a trois ans, ses cheveux sont longs et un peu bouclés, elle a des yeux marrons, c\'est une petite fille très gentille et très rigolote.',
+    audioSrc: '/audio/petite-soeur.mp3',
+    category: 'Family'
+  },
+  {
+    id: '24',
+    english: 'What do you like?',
+    french: 'Qu\'est-ce que tu aimes ?',
+    audioSrc: '/audio/ce-que-tu-aimes.mp3',
+    category: 'Preferences'
+  },
+  {
+    id: '25',
+    english: 'I like reading, playing, and doing sports.',
+    french: 'J\'aime lire, jouer et faire du sport.',
+    audioSrc: '/audio/aime-activites.mp3',
+    category: 'Preferences'
+  },
+  {
+    id: '26',
+    english: 'What do you not like?',
+    french: 'Qu\'est-ce que tu n\'aimes pas ?',
+    audioSrc: '/audio/ce-que-tu-naimes-pas.mp3',
+    category: 'Preferences'
+  },
+  {
+    id: '27',
+    english: 'I don\'t like football!',
+    french: 'Je n\'aime pas le foot !',
+    audioSrc: '/audio/naime-pas-foot.mp3',
+    category: 'Preferences'
+  },
+  {
+    id: '28',
+    english: 'Here are the days of the week:',
+    french: 'Voici les jours de la semaine.',
+    audioSrc: '/audio/voici-jours-semaine.mp3',
+    category: 'Days of the Week'
+  },
+  {
+    id: '29',
+    english: 'Monday',
+    french: 'Lundi',
+    audioSrc: '/audio/lundi.mp3',
+    category: 'Days of the Week'
+  },
+  {
+    id: '30',
+    english: 'Tuesday',
+    french: 'Mardi',
+    audioSrc: '/audio/mardi.mp3',
+    category: 'Days of the Week'
+  },
+  {
+    id: '31',
+    english: 'Wednesday',
+    french: 'Mercredi',
+    audioSrc: '/audio/mercredi.mp3',
+    category: 'Days of the Week'
+  },
+  {
+    id: '32',
+    english: 'Thursday',
+    french: 'Jeudi',
+    audioSrc: '/audio/jeudi.mp3',
+    category: 'Days of the Week'
+  },
+  {
+    id: '33',
+    english: 'Friday',
+    french: 'Vendredi',
+    audioSrc: '/audio/vendredi.mp3',
+    category: 'Days of the Week'
+  },
+  {
+    id: '34',
+    english: 'Saturday',
+    french: 'Samedi',
+    audioSrc: '/audio/samedi.mp3',
+    category: 'Days of the Week'
+  },
+  {
+    id: '35',
+    english: 'Sunday',
+    french: 'Dimanche',
+    audioSrc: '/audio/dimanche.mp3',
+    category: 'Days of the Week'
+  },
+  {
+    id: '36',
+    english: 'Here are the months of the year:',
+    french: 'Voici les mois de l\'année.',
+    audioSrc: '/audio/voici-mois-annee.mp3',
+    category: 'Months'
+  },
+  {
+    id: '37',
+    english: 'January',
+    french: 'Janvier',
+    audioSrc: '/audio/janvier.mp3',
+    category: 'Months'
+  },
+  {
+    id: '38',
+    english: 'February',
+    french: 'Février',
+    audioSrc: '/audio/fevrier.mp3',
+    category: 'Months'
+  },
+  {
+    id: '39',
+    english: 'March',
+    french: 'Mars',
+    audioSrc: '/audio/mars.mp3',
+    category: 'Months'
+  },
+  {
+    id: '40',
+    english: 'April',
+    french: 'Avril',
+    audioSrc: '/audio/avril.mp3',
+    category: 'Months'
+  },
+  {
+    id: '41',
+    english: 'May',
+    french: 'Mai',
+    audioSrc: '/audio/mai.mp3',
+    category: 'Months'
+  },
+  {
+    id: '42',
+    english: 'June',
+    french: 'Juin',
+    audioSrc: '/audio/juin.mp3',
+    category: 'Months'
+  },
+  {
+    id: '43',
+    english: 'July',
+    french: 'Juillet',
+    audioSrc: '/audio/juillet.mp3',
+    category: 'Months'
+  },
+  {
+    id: '44',
+    english: 'August',
+    french: 'Août',
+    audioSrc: '/audio/aout.mp3',
+    category: 'Months'
+  },
+  {
+    id: '45',
+    english: 'September',
+    french: 'Septembre',
+    audioSrc: '/audio/septembre.mp3',
+    category: 'Months'
+  },
+  {
+    id: '46',
+    english: 'October',
+    french: 'Octobre',
+    audioSrc: '/audio/octobre.mp3',
+    category: 'Months'
+  },
+  {
+    id: '47',
+    english: 'November',
+    french: 'Novembre',
+    audioSrc: '/audio/novembre.mp3',
+    category: 'Months'
+  },
+  {
+    id: '48',
+    english: 'December',
+    french: 'Décembre',
+    audioSrc: '/audio/decembre.mp3',
+    category: 'Months'
+  },
+  {
+    id: '49',
+    english: 'Here are the four seasons:',
+    french: 'Voici les quatre saisons.',
+    audioSrc: '/audio/voici-quatre-saisons.mp3',
+    category: 'Seasons'
+  },
+  {
+    id: '50',
+    english: 'Spring',
+    french: 'Le printemps',
+    audioSrc: '/audio/printemps.mp3',
+    category: 'Seasons'
+  },
+  {
+    id: '51',
+    english: 'Summer',
+    french: 'L\'été',
+    audioSrc: '/audio/ete.mp3',
+    category: 'Seasons'
+  },
+  {
+    id: '52',
+    english: 'Autumn',
+    french: 'L\'automne',
+    audioSrc: '/audio/automne.mp3',
+    category: 'Seasons'
+  },
+  {
+    id: '53',
+    english: 'Winter',
+    french: 'L\'hiver',
+    audioSrc: '/audio/hiver.mp3',
+    category: 'Seasons'
   }
 ];
 
@@ -153,5 +384,10 @@ export const categories: string[] = [
   'Sports',
   'Preferences',
   'Study',
-  'Holidays'
+  'Holidays',
+  'Personal Description',
+  'Family',
+  'Days of the Week',
+  'Months',
+  'Seasons'
 ];

@@ -4,6 +4,8 @@ export interface Phrase {
   french: string;
   audioSrc: string;
   category: string;
+  emoji?: string;
+  animation?: string;
 }
 
 export type Category = {

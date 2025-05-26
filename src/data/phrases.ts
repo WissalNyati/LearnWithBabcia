@@ -146,56 +146,64 @@ export const phrases: Phrase[] = [
     english: 'I have chestnut hair and brown eyes. I am a friendly, sporty, and calm person. I like intellectual, sports, and manual activities.',
     french: 'J\'ai les cheveux châtains et les yeux marrons. Je suis une personne sympathique, sportive et calme. J\'aime les activités intellectuelles, sportives et manuelles.',
     audioSrc: '/audio/cheveux-yeux.mp3',
-    category: 'Personal Description'
+    category: 'Personal Description',
+    emoji: '👩'
   },
   {
     id: '22',
     english: 'Do you have brothers and sisters?',
     french: 'As-tu des frères et sœurs ?',
     audioSrc: '/audio/freres-soeurs.mp3',
-    category: 'Family'
+    category: 'Family',
+    emoji: '👨‍👩‍👧‍👦'
   },
   {
     id: '23',
     english: 'I have a little sister, her name is Hannah, she is three years old, her hair is long and a bit curly, she has brown eyes, she is a very kind and very funny little girl.',
     french: 'J\'ai une petite sœur, elle s\'appelle Hannah, elle a trois ans, ses cheveux sont longs et un peu bouclés, elle a des yeux marrons, c\'est une petite fille très gentille et très rigolote.',
     audioSrc: '/audio/petite-soeur.mp3',
-    category: 'Family'
+    category: 'Family',
+    emoji: '👧'
   },
   {
     id: '24',
     english: 'What do you like?',
     french: 'Qu\'est-ce que tu aimes ?',
     audioSrc: '/audio/ce-que-tu-aimes.mp3',
-    category: 'Preferences'
+    category: 'Preferences',
+    emoji: '❤️'
   },
   {
     id: '25',
     english: 'I like reading, playing, and doing sports.',
     french: 'J\'aime lire, jouer et faire du sport.',
     audioSrc: '/audio/aime-activites.mp3',
-    category: 'Preferences'
+    category: 'Preferences',
+    emoji: '📚⚽'
   },
   {
     id: '26',
     english: 'What do you not like?',
     french: 'Qu\'est-ce que tu n\'aimes pas ?',
     audioSrc: '/audio/ce-que-tu-naimes-pas.mp3',
-    category: 'Preferences'
+    category: 'Preferences',
+    emoji: '❌'
   },
   {
     id: '27',
     english: 'I don\'t like football!',
     french: 'Je n\'aime pas le foot !',
     audioSrc: '/audio/naime-pas-foot.mp3',
-    category: 'Preferences'
+    category: 'Preferences',
+    emoji: '⚽❌'
   },
   {
     id: '28',
     english: 'Here are the days of the week:',
     french: 'Voici les jours de la semaine.',
     audioSrc: '/audio/voici-jours-semaine.mp3',
-    category: 'Days of the Week'
+    category: 'Days of the Week',
+    emoji: '📅'
   },
   {
     id: '29',
@@ -251,7 +259,8 @@ export const phrases: Phrase[] = [
     english: 'Here are the months of the year:',
     french: 'Voici les mois de l\'année.',
     audioSrc: '/audio/voici-mois-annee.mp3',
-    category: 'Months'
+    category: 'Months',
+    emoji: '📆'
   },
   {
     id: '37',
@@ -342,35 +351,40 @@ export const phrases: Phrase[] = [
     english: 'Here are the four seasons:',
     french: 'Voici les quatre saisons.',
     audioSrc: '/audio/voici-quatre-saisons.mp3',
-    category: 'Seasons'
+    category: 'Seasons',
+    emoji: '🌤️'
   },
   {
     id: '50',
     english: 'Spring',
     french: 'Le printemps',
     audioSrc: '/audio/printemps.mp3',
-    category: 'Seasons'
+    category: 'Seasons',
+    emoji: '🌸'
   },
   {
     id: '51',
     english: 'Summer',
     french: 'L\'été',
     audioSrc: '/audio/ete.mp3',
-    category: 'Seasons'
+    category: 'Seasons',
+    emoji: '☀️'
   },
   {
     id: '52',
     english: 'Autumn',
     french: 'L\'automne',
     audioSrc: '/audio/automne.mp3',
-    category: 'Seasons'
+    category: 'Seasons',
+    emoji: '🍂'
   },
   {
     id: '53',
     english: 'Winter',
     french: 'L\'hiver',
     audioSrc: '/audio/hiver.mp3',
-    category: 'Seasons'
+    category: 'Seasons',
+    emoji: '❄️'
   }
 ];
 

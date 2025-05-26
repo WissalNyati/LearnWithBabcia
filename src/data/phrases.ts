@@ -122,22 +122,22 @@ export const phrases: Phrase[] = [
   },
   {
     id: '18',
-    english: 'What is your favorite subject?',
-    french: 'Quelle est ta matière préférée ?',
+    english: 'What subjects do you learn in your school?',
+    french: 'Quelle sonts les matière que tu apprends dans ton ecole ?',
     audioSrc: '/audio/qulle matiere prefere.mp3',
     category: 'School'
   },
   {
     id: '19',
-    english: 'I am learning French.',
-    french: 'J\'apprends le français.',
+    english: 'I learn science, mathematics, theater, drawing and many other things.',
+    french: 'J\'apprends les sciences les mathématiques le théâtre le dessin et beaucoup d\'autres choses.',
     audioSrc: '/audio/japprend.mp3',
     category: 'Study'
   },
   {
     id: '20',
-    english: 'I practice theatre.',
-    french: 'Je pratique le théâtre.',
+    english: 'I practice also theatre that I really like.',
+    french: 'Je pratique aussi le théâtre que j\'aime beaucoup.',
     audioSrc: '/audio/je pratique le theatre.mp3',
     category: 'Activities'
   },
